@@ -8,7 +8,7 @@ public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     @Column(name = "model")
     private String model;
@@ -16,11 +16,16 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    public Long getId() {
+    public Car(String model, int series) {
+        this.model = model;
+        this.series = series;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -16,25 +16,10 @@ public class MainApp {
 
         UserService userService = context.getBean(UserService.class);
 
-        Car car1 = new Car();
-        car1.setSeries(1);
-        car1.setModel("model1");
-        car1.setSeries(1111);
-
-        Car car2 = new Car();
-        car2.setSeries(2);
-        car2.setModel("model2");
-        car2.setSeries(2222);
-
-        Car car3 = new Car();
-        car3.setSeries(3);
-        car3.setModel("model3");
-        car3.setSeries(3333);
-
-        Car car4 = new Car();
-        car4.setSeries(4);
-        car4.setModel("model4");
-        car4.setSeries(4444);
+        Car car1 = new Car("model1", 1111);
+        Car car2 = new Car("model2", 2222);
+        Car car3 = new Car("model3", 3333);
+        Car car4 = new Car("model4", 4444);
 
         userService.add(new User("User1", "Lastname1", "user1@mail.ru", car1));
         userService.add(new User("User2", "Lastname2", "user2@mail.ru", car2));
